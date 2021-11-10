@@ -1,0 +1,174 @@
+// CUSTOM VARIABLES
+// scss-docs-start color-variables
+$tertiary: #ff585f;
+$yellow: #ffbb00;
+$green: #5ec576;
+// scss-docs-end color-variables
+
+// scss-docs-start gray-color-variables
+$gray-100: #f3f3f3;
+$gray-900: #37383d;
+$gray-700: #495057;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start theme-color-variables
+$primary: $green;
+$secondary: $yellow;
+$light: $gray-100;
+$dark: $gray-900;
+// scss-docs-end theme-color-variables
+
+// TYPOGRAPHY
+$font-size-base: 1rem;
+$font-size-lg: $font-size-base * 1.25;
+
+$h1-font-size: $font-size-base * 3.5;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 2.5;
+$h5-font-size: $font-size-base * 1.5;
+$h6-font-size: $font-size-base;
+
+$headings-line-height: 1.5;
+
+// scss-docs-start font-variables
+$font-family-sans-serif: 'Poppins', sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 600;
+// scss-docs-end font-variables
+
+// Style anchor elements.
+$link-color: $light;
+$link-hover-color: $primary;
+
+// scss-docs-start nav-variables
+$nav-link-color: $link-color;
+$nav-link-font-weight: $font-weight-normal;
+// scss-docs-end nav-variables
+
+// scss-docs-start navbar-theme-variables
+$navbar-light-color: $dark;
+$navbar-light-hover-color: $primary;
+// scss-docs-end navbar-theme-variables
+
+// scss-docs-start border-radius-variables
+$border-radius: 2.5rem;
+// scss-docs-end border-radius-variables
+
+// scss-docs-start btn-variables
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 2rem;
+// scss-docs-end btn-variables
+
+// scss-docs-start carousel-variables
+$carousel-control-icon-width: 4rem;
+// scss-docs-end carousel-variables
+
+// scss-docs-start border-variables
+$border-color: $gray-700;
+// scss-docs-end border-variables
+
+// scss-docs-start type-variables
+$blockquote-font-size: $font-size-lg;
+$spacer: 1rem;
+$blockquote-margin-y: $spacer * 2;
+// scss-docs-end type-variables
+
+// scss-docs-start accordion-variables
+$accordion-border-radius: 0;
+$accordion-inner-border-radius: 0;
+
+$accordion-button-color: $dark;
+$accordion-button-active-color: $dark;
+$accordion-button-active-bg: $primary;
+// scss-docs-end accordion-variables
+
+// CUSTOM MAPS
+//import functions and variables files
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+// scss-docs-start theme-colors-map
+$custom-theme-colors: (
+  'tertiary': $pink,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+// scss-docs-end theme-colors-map
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$custom-spacers: (
+  6: $spacer * 5,
+  7: $spacer * 10,
+);
+
+$spacers: map-merge($custom-spacers, $spacers);
+// scss-docs-end spacer-variables-maps
+
+// scss-docs-start utils-sizing
+$utilities: (
+  'max-width': (
+    property: max-width,
+    class: mw,
+    values: (
+      100: 100%,
+      50: 50%,
+      70: 70%,
+      80: 80%,
+    ),
+  ),
+);
+// scss-docs-end utils-sizing
+
+// Set the number of columns and specify the width of the gutters.
+$grid-gutter-width: 1.5rem;
+$gutters: (
+  5: $spacer * 8,
+);
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.highlight {
+  position: relative;
+}
+
+.highlight::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-color: $primary;
+}
+
+/* FEATURES */
+.features__icon {
+  height: 3.5rem;
+  width: 3.5rem;
+
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: $dark;
+  }
+}
+
+/* OPERATIONS */
+.accordion-button {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+  }
+}
