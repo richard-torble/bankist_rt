@@ -85,6 +85,11 @@ $accordion-button-active-color: $dark;
 $accordion-button-active-bg: $primary;
 // scss-docs-end accordion-variables
 
+// scss-docs-start border-radius-variables
+$border-radius-sm: 0.2rem;
+$input-border-radius: $border-radius-sm;
+// scss-docs-end border-radius-variables
+
 // CUSTOM MAPS
 //import functions and variables files
 @import '../node_modules/bootstrap/scss/_functions';
